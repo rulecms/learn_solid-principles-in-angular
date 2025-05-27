@@ -2,6 +2,8 @@
 
 A professional Angular application demonstrating the SOLID principles of object-oriented design through interactive examples and explanations.
 
+🌐 **View Live Demo**: [https://learn-solid.org/](https://learn-solid.org/)
+
 ## Overview
 
 This application provides an educational, hands-on approach to understanding the five SOLID principles:
