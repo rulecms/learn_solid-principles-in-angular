@@ -1,5 +1,5 @@
 name = "solid-tutorial"
 compatibility_date = "2025-05-27"
 
-[site]
-bucket = "./dist/solid-tutorial"
+[assets]
+directory = "./dist/solid-tutorial"
