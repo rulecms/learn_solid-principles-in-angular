@@ -1,0 +1,95 @@
+.principle-page-container {
+    padding: 2rem;
+    background-color: #121212;
+    min-height: 100vh;
+    color: #ffffff;
+  
+    .breadcrumb {
+      margin-bottom: 1.5rem;
+      font-size: 0.9rem;
+      color: #aaa; // Lighter color for breadcrumbs in dark theme
+  
+      a {
+        color: #bb86fc; // Purple accent for links
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+          color: #da9cff;
+        }
+      }
+      span {
+        color: #ccc; // Current page indicator
+      }
+    }
+  
+    .principle-header {
+      margin-bottom: 2rem;
+      text-align: left;
+  
+      h1 {
+        font-size: 2.8rem;
+        margin-bottom: 0.5rem;
+        color: #ffffff;
+      }
+  
+      .subtext {
+        font-size: 1.3rem;
+        color: #b3b3b3; // Lighter text for subtext
+        max-width: 900px;
+      }
+    }
+  
+    .demonstration-info {
+      margin-bottom: 2rem;
+      background-color: #1e1e1e; // Darker background for this section
+      padding: 1.5rem;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+  
+      h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+        color: #ffffff;
+      }
+      p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: #b3b3b3;
+      }
+    }
+    
+    .tab-navigation {
+      margin-bottom: 1.5rem;
+      display: flex;
+      gap: 1rem;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 0.5rem;
+      
+      .tab-button {
+        min-width: 150px;
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+    }
+
+    .example-outlet-container {
+        padding-top: 1rem;
+        background-color: #121212;
+    }
+  }
+  
+  .loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    font-size: 1.5rem;
+    color: #ffffff;
+    background-color: #121212;
+  }
+  
+  // Ensure app-back-button is styled appropriately if not already
+  app-back-button {
+    margin-bottom: 1.5rem;
+    display: inline-block; // Allows margin-bottom to take effect
+  }

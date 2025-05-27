@@ -1,0 +1,53 @@
+.example-content {
+  padding: 1rem;
+  border: 1px solid #444; // Border for the example content area
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.03); // Very subtle background tint
+
+  h3 {
+    font-size: 1.6rem;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    color: #E0E0E0; // Light color for titles
+  }
+
+  .example-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: #BDBDBD; // Lighter grey for description
+    white-space: pre-wrap; // Respect newlines in description
+  }
+
+  .code-comparison-area {
+    // Styles for the container of multiple code snippets if needed
+    // For example, if you want to lay them out side-by-side in some cases
+  }
+
+  .pros-cons {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px dashed #555;
+
+    h4 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: #C5C5C5;
+    }
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      margin-bottom: 1rem;
+      li {
+        margin-bottom: 0.3rem;
+        color: #BDBDBD;
+      }
+    }
+  }
+}
+
+.loading-example {
+  padding: 2rem;
+  text-align: center;
+  color: #888;
+}

@@ -1,1 +1,69 @@
 /* You can add global styles to this file, and also import other style files */
+@import "@angular/material/prebuilt-themes/pink-bluegrey.css";
+
+html, body { 
+  height: 100%;
+  background-color: #121212; // Dark background
+  color: #ffffff; // White text
+}
+
+body { 
+  margin: 0; 
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+// Apply dark theme to the main app container
+app-root {
+  display: block;
+  min-height: 100vh;
+  background-color: #121212;
+  color: #ffffff;
+}
+
+// Ensure router outlet content inherits dark theme
+router-outlet + * {
+  display: block;
+  min-height: 100vh;
+}
+
+// Global link styling for dark theme
+a {
+  color: #bb86fc; // Material Design purple accent for links
+  
+  &:hover {
+    color: #da9cff;
+  }
+}
+
+// Card and container backgrounds
+.mat-mdc-card {
+  background-color: #1e1e1e !important;
+  color: #ffffff !important;
+}
+
+// Material buttons in dark theme
+.mat-mdc-button, .mat-mdc-raised-button, .mat-mdc-stroked-button {
+  &.mat-basic {
+    background-color: #2e2e2e !important;
+    color: #ffffff !important;
+    
+    &:hover {
+      background-color: #3e3e3e !important;
+    }
+  }
+}
+
+// Ensure all text maintains readability
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff;
+}
+
+p {
+  color: #e0e0e0;
+}
+
+// Import Prism.js theme for syntax highlighting
+@import "prismjs/themes/prism-tomorrow.css";
+// Import Prism.js plugins CSS
+@import "prismjs/plugins/line-numbers/prism-line-numbers.css";
+@import "prismjs/plugins/line-highlight/prism-line-highlight.css";

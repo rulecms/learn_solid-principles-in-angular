@@ -1,0 +1,6 @@
+<div class="code-snippet-container">
+  <pre><code [ngClass]="'language-' + language">{{ code }}</code></pre>
+  <div *ngIf="explanation" class="explanation">
+    <p>{{ explanation }}</p>
+  </div>
+</div>

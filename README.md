@@ -1,59 +1,187 @@
-# SolidTutorial
+# SOLID Principles Tutorial - Angular Application
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.13.
+A professional Angular application demonstrating the SOLID principles of object-oriented design through interactive examples and explanations.
 
-## Development server
+## Overview
 
-To start a local development server, run:
+This application provides an educational, hands-on approach to understanding the five SOLID principles:
 
-```bash
-ng serve
+- **S** - Single Responsibility Principle
+- **O** - Open/Closed Principle
+- **L** - Liskov Substitution Principle
+- **I** - Interface Segregation Principle
+- **D** - Dependency Inversion Principle
+
+## Features
+
+- 🎨 **Dark Professional Theme**: Built with Angular Material's pink-bluegrey dark theme
+- 💻 **Interactive Code Examples**: Side-by-side comparison of bad vs. good implementations
+- 🔍 **Syntax Highlighting**: Code snippets with Prism.js highlighting and line numbers
+- 📱 **Responsive Design**: Works seamlessly on desktop and mobile devices
+- 🚀 **Lazy Loading**: Optimized performance with lazy-loaded feature modules
+- 🧩 **Modular Architecture**: Clean separation of concerns with feature modules
+
+## Technology Stack
+
+- **Angular 19**: Latest Angular framework with standalone components
+- **Angular Material**: UI component library for consistent design
+- **TypeScript**: Type-safe development
+- **SCSS**: Advanced styling with variables and mixins
+- **Prism.js**: Syntax highlighting for code examples
+- **RxJS**: Reactive programming for data flow
+
+## Project Structure
+
+```
+solid-tutorial/
+├── src/
+│   ├── app/
+│   │   ├── core/
+│   │   │   └── services/
+│   │   │       └── principles-data.service.ts    # SOLID principles content
+│   │   ├── features/
+│   │   │   ├── home/
+│   │   │   │   └── home.component.ts            # Landing page
+│   │   │   └── principles/
+│   │   │       ├── principles.module.ts         # Lazy-loaded module
+│   │   │       └── components/
+│   │   │           ├── principle-page/          # Container for each principle
+│   │   │           ├── example-page/            # Generic example display
+│   │   │           ├── bad-example.component.ts # Bad practice examples
+│   │   │           └── good-example.component.ts # Good practice examples
+│   │   └── shared/
+│   │       ├── shared.module.ts
+│   │       └── components/
+│   │           ├── card/                        # Reusable card component
+│   │           ├── code-snippet/                # Code display with highlighting
+│   │           └── back-button/                 # Navigation component
+│   └── styles.scss                              # Global styles
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Getting Started
 
-## Code scaffolding
+### Prerequisites
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- Node.js (v18 or higher)
+- npm or yarn package manager
+- Angular CLI (optional, included as dev dependency)
 
+### Installation
+
+1. Clone the repository:
 ```bash
-ng generate component component-name
+git clone [repository-url]
+cd solid-tutorial
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
+2. Install dependencies:
 ```bash
-ng generate --help
+npm install
 ```
 
-## Building
-
-To build the project run:
-
+3. Start the development server:
 ```bash
-ng build
+npm start
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
+4. Open your browser and navigate to:
+```
+http://localhost:4200
 ```
 
-## Running end-to-end tests
+## Development
 
-For end-to-end (e2e) testing, run:
+### Available Scripts
 
-```bash
-ng e2e
+- `npm start` - Start development server
+- `npm run build` - Build for production
+- `npm test` - Run unit tests
+- `npm run lint` - Lint the codebase
+
+### Adding New Principles or Examples
+
+To add new content, modify the `PrinciplesDataService` in `src/app/core/services/principles-data.service.ts`. Each principle follows this structure:
+
+```typescript
+{
+  id: 's',
+  name: 'S - Single Responsibility Principle',
+  fullName: 'Single Responsibility Principle',
+  description: 'Description of the principle',
+  howToDemonstrate: 'How we demonstrate it',
+  badExample: {
+    title: 'Title for bad example',
+    description: 'Why this is bad',
+    codeSnippets: [{
+      code: 'Code string',
+      language: 'typescript',
+      explanation: 'Explanation',
+      highlight: 'Line numbers to highlight'
+    }]
+  },
+  goodExample: {
+    // Similar structure
+  }
+}
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## SOLID Principles Examples
 
-## Additional Resources
+### 1. Single Responsibility Principle (SRP)
+- **Bad**: Component handling both data fetching and display
+- **Good**: Component delegating data operations to a service
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### 2. Open/Closed Principle (OCP)
+- **Bad**: Payment processor with if/else chains for payment types
+- **Good**: Strategy pattern with payment strategies
+
+### 3. Liskov Substitution Principle (LSP)
+- **Bad**: Subclass throwing errors for base class methods
+- **Good**: Subclass maintaining base class contracts
+
+### 4. Interface Segregation Principle (ISP)
+- **Bad**: Fat interface forcing unnecessary implementations
+- **Good**: Segregated interfaces for specific capabilities
+
+### 5. Dependency Inversion Principle (DIP)
+- **Bad**: High-level module depending on concrete implementations
+- **Good**: Both depending on abstractions with dependency injection
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## Best Practices Demonstrated
+
+- **Component Architecture**: Standalone components with clear responsibilities
+- **Module Organization**: Feature modules with lazy loading
+- **Service Layer**: Centralized data management
+- **Type Safety**: Full TypeScript typing throughout
+- **Reactive Patterns**: RxJS for asynchronous operations
+- **CSS Architecture**: SCSS with component encapsulation
+- **Accessibility**: ARIA labels and semantic HTML
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- Angular team for the excellent framework
+- Angular Material team for the UI components
+- Prism.js for syntax highlighting
+- The software engineering community for SOLID principles
+
+## Future Enhancements
+
+- [ ] Add pros/cons sections for each example
+- [ ] Include unit tests for all components
+- [ ] Add animations for better user experience
+- [ ] Implement search functionality
+- [ ] Add downloadable code examples
+- [ ] Include video tutorials
+- [ ] Multi-language support

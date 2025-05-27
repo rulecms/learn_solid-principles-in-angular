@@ -1,0 +1,9 @@
+button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem; // Space between icon and text
+}
+
+mat-icon {
+  // Potentially adjust icon size or color if needed, though defaults are usually fine.
+}

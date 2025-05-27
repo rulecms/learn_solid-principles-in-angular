@@ -1,0 +1,44 @@
+<div class="principle-page-container" *ngIf="principle">
+  <app-back-button></app-back-button>
+  
+  <div class="breadcrumb">
+    <a routerLink="/">Home</a> / <a [routerLink]="['/principles', currentPrincipleId]">{{ principle.fullName }}</a>
+    <span *ngIf="router.url.includes('bad-example')"> / Without Principle</span>
+    <span *ngIf="router.url.includes('good-example')"> / With Principle</span>
+  </div>
+
+  <header class="principle-header">
+    <h1>{{ principle.name }}</h1>
+    <p class="subtext">{{ principle.description }}</p>
+  </header>
+
+  <section class="demonstration-info">
+    <h2>How this principle will be demonstrated:</h2>
+    <p>{{ principle.howToDemonstrate }}</p>
+  </section>
+
+  <div class="tab-navigation">
+    <a mat-raised-button 
+       [color]="router.url.includes('bad-example') ? 'primary' : 'basic'"
+       routerLink="bad-example" 
+       class="tab-button">
+      Without Principle
+    </a>
+    <a mat-raised-button 
+       [color]="router.url.includes('good-example') ? 'primary' : 'basic'"
+       routerLink="good-example" 
+       class="tab-button">
+      With Principle
+    </a>
+  </div>
+  
+  <div class="example-outlet-container">
+    <router-outlet></router-outlet>
+  </div>
+
+</div>
+
+<div *ngIf="!principle" class="loading">
+  Loading principle details...
+  <!-- Or a spinner component -->
+</div>

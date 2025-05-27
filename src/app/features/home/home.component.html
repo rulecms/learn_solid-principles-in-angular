@@ -1,0 +1,17 @@
+<div class="home-container">
+  <h1>Mastering SOLID Principles in Angular</h1>
+  <p class="description">
+    Welcome to the SOLID Principles tutorial! This application demonstrates each of the five SOLID principles 
+    of object-oriented design using practical Angular examples. Explore the principles below to understand how 
+    they can help you write more maintainable, scalable, and robust Angular applications.
+  </p>
+
+  <div class="principles-grid">
+    <app-card 
+      *ngFor="let principle of solidPrinciples"
+      [title]="principle.name"
+      [summary]="principle.summary"
+      (click)="navigateToPrinciple(principle.shortName)">
+    </app-card>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+:host {
+    display: block; // Ensures the host element takes up space and can be styled
+  }
+  
+  .principle-card {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    background-color: #1e1e1e !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(255, 255, 255, 0.15); // Light shadow for dark theme
+      background-color: #252525 !important;
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+  
+    mat-card-title {
+      font-size: 1.4rem;
+      color: #ffffff !important;
+    }
+  
+    mat-card-content p {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #b3b3b3 !important;
+    }
+  }

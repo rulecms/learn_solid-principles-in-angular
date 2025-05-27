@@ -1,0 +1,27 @@
+<div class="example-content" *ngIf="exampleData">
+  <h3 *ngIf="exampleData.title">{{ exampleData.title }}</h3>
+  <p *ngIf="exampleData.description" class="example-description">{{ exampleData.description }}</p>
+
+  <div class="code-comparison-area">
+    <app-code-snippet 
+      *ngFor="let snippet of exampleData.codeSnippets"
+      [code]="snippet.code"
+      [language]="snippet.language || 'typescript'"
+      [explanation]="snippet.explanation"
+      [highlightLines]="snippet.highlight">
+    </app-code-snippet>
+  </div>
+
+  <!-- Placeholder for Pros/Cons or highlighted drawbacks -->
+  <!-- 
+  <div class="pros-cons" *ngIf="exampleData.pros || exampleData.cons">
+    <h4>Pros:</h4>
+    <ul> <li *ngFor="let pro of exampleData.pros">{{ pro }}</li> </ul>
+    <h4>Cons/Drawbacks:</h4>
+    <ul> <li *ngFor="let con of exampleData.cons">{{ con }}</li> </ul>
+  </div>
+  -->
+</div>
+<div *ngIf="!exampleData" class="loading-example">
+  Loading example...
+</div>
