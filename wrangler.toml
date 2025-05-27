@@ -1,4 +1,5 @@
-name = "solid-tutorial"
+# wrangler.toml
+name = 'learn-solid-principles-in-angular'
 compatibility_date = "2025-05-27"
 
 [assets]
