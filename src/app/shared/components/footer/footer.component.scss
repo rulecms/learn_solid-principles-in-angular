@@ -1,0 +1,55 @@
+.app-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  .footer-toolbar {
+    background-color: #1a1a1a;
+    color: #b3b3b3;
+    min-height: 48px;
+    justify-content: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .footer-content {
+    text-align: center;
+    width: 100%;
+  }
+
+  .footer-text {
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+  }
+
+  .heart {
+    color: #ff4458;
+    font-size: 1.1rem;
+    animation: heartbeat 2s ease-in-out infinite;
+  }
+
+  .rulecms-link {
+    color: #bb86fc;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #da9cff;
+      text-decoration: underline;
+    }
+  }
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  5% { transform: scale(1.1); }
+  10% { transform: scale(1); }
+  15% { transform: scale(1.1); }
+  20% { transform: scale(1); }
+  100% { transform: scale(1); }
+}

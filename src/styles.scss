@@ -23,7 +23,7 @@ app-root {
 // Ensure router outlet content inherits dark theme
 router-outlet + * {
   display: block;
-  min-height: 100vh;
+  min-height: calc(100vh - 60px); // Account for footer height
 }
 
 // Global link styling for dark theme
