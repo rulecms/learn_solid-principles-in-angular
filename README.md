@@ -176,12 +176,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - Prism.js for syntax highlighting
 - The software engineering community for SOLID principles
 
-## Future Enhancements
+## Credits
 
-- [ ] Add pros/cons sections for each example
-- [ ] Include unit tests for all components
-- [ ] Add animations for better user experience
-- [ ] Implement search functionality
-- [ ] Add downloadable code examples
-- [ ] Include video tutorials
-- [ ] Multi-language support
+Created with ❤️ by the [RuleCMS Team](https://rulecms.com)
+
