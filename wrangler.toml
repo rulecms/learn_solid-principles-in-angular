@@ -3,4 +3,4 @@ name = 'learn-solid-principles-in-angular'
 compatibility_date = "2025-05-27"
 
 [assets]
-directory = "./dist/solid-tutorial"
+directory = "./dist/solid-tutorial/browser"
